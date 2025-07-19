@@ -1,0 +1,247 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+}
+/*for change of mode (DARK TO LIGHT )*/
+:root {
+    --bg-color: white;
+    --text-color: black;
+  }
+  
+  .dark-mode {
+    --bg-color: black;
+    --text-color: white;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  /* Default Light Mode */
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.navbar, .category-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #f8f9fa;
+}
+
+.dark-mode .navbar, .dark-mode .category-nav {
+    background: #333;
+}
+
+.search-box input {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.dark-mode .search-box input {
+    background: #222;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #0077b6;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo h2 {
+    margin: 0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.search-box input {
+    border: none;
+    padding: 5px;
+    outline: none;
+}
+
+/* Navigation Links */
+.nav-notifications {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-notifications a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: #023e8a;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-notifications img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* Category Navigation */
+.category-nav {
+    display: flex;
+    justify-content: center;
+    background: #caf0f8;/*color of background of buttons in menu*/
+    padding: 10px 0;
+    gap: 15px;
+}
+
+.category-nav a {
+    text-decoration: none;
+    color: #0077b6;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.category-nav a.active,
+.category-nav a:hover {
+    background: #023e8a;
+    color: white;
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left Content */
+.main-articles {
+    flex: 2;
+}
+
+.left-head {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 10px rgba(253, 248, 248, 0.1);
+}
+
+.left-head-para {
+    display: flex;
+    gap: 15px;
+}
+
+.left-head-para img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Grid Layout */
+.left-bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.left-div {
+    display: flex;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.left-div img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+/* Right Sidebar */
+.article-recommendations {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.right-div img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-head-para {
+        flex-direction: column;
+    }
+
+    .left-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .category-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .left-head-para img, .photo-left img, .photo-right img {
+        width: 100%;
+        height: auto;
+    }
+}

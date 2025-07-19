@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography | BlogVerse</title>
+    <link rel="stylesheet" href="photography.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>PHOTOGRAPHY</h1>
+        <nav class="category-nav">
+            <span class="icon">+</span>
+            <a href="medium.html" >Home</a>
+            <a href="following.html">Following</a>
+            <a href="cryptocurrency.html">Cryptocurrency</a>
+            <a href="About.html">About</a>
+          
+            <a href="photography.html"class="active">Photography</a>
+            <span class="icon">&gt;</span>
+        </nav>
+    </header>
+
+    <!-- Photo Gallery -->
+    <section class="gallery">
+        <h2>✨ Our Captured Moments</h2>
+        <div class="photo-grid">
+            <img src="images/LANDscape.jpg" alt="Landscape" onclick="openLightbox(this)">
+            <img src="images/citylight.jpeg" alt="City Lights" onclick="openLightbox(this)">
+            <img src="images/nature beauty.jpg" alt="Nature Beauty" onclick="openLightbox(this)">
+            <img src="images/mountain.jpeg" alt="Mountain View" onclick="openLightbox(this)">
+            <img src="images/sunset bliss.jpeg" alt="Sunset Bliss" onclick="openLightbox(this)">
+            <img src="images/street photo.jpg" alt="Street Photography" onclick="openLightbox(this)">
+        </div>
+    </section>
+
+    <!-- Lightbox for Full-Size Images -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged Photo">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
